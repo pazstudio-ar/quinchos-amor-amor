@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>El Quincho de Amor Amor · Quinchos para eventos en Piñeyro y Dominico</title>
+<meta name="description" content="Quinchos con pileta climatizada en Piñeyro y Dominico para cumpleaños, bautismos, comuniones y reuniones. Consultá fechas por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Mulish:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* Idea: la tarjeta de invitación. La web hace lo que hace la invitación: fecha, lugar y "confirmá". */
+:root{
+  --fondo:#FFF8F9;
+  --rosa:#DB6A8F;
+  --rosa-osc:#B94A70;
+  --rosa-claro:#FBE7ED;
+  --ciruela:#46203B;
+  --oro:#BE9437;
+  --gris:#77606E;
+  --linea:#F0D5DE;
+  --f:"Mulish",system-ui,sans-serif;
+  --script:"Yellowtail",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--fondo);color:var(--ciruela);font:400 1.0625rem/1.6 var(--f);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select{font:inherit}
+:focus-visible{outline:3px solid var(--oro);outline-offset:2px}
+.wrap{width:min(1080px,100% - 36px);margin-inline:auto}
+h1,h2,h3{margin:0;line-height:1.1}
+h2{font-size:clamp(1.9rem,4.4vw,2.6rem);font-weight:900;letter-spacing:-.01em}
+.intro{margin:10px 0 30px;color:var(--gris);max-width:56ch}
+section{padding:68px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border:0;border-radius:999px;background:var(--rosa);color:#fff;font-weight:800;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--rosa-osc)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* portada */
+.portada{padding:30px 0 70px;background:radial-gradient(120% 70% at 50% 0,var(--rosa-claro),var(--fondo) 70%)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px;font-weight:600;font-size:.95rem}
+.top a{text-decoration:none;color:var(--rosa-osc)}
+.portada .wrap>.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:880px){.portada .wrap>.grid{grid-template-columns:1fr}}
+.nombre{font-weight:800;font-size:.95rem;color:var(--gris)}
+.amor{display:block;font-family:var(--script);font-weight:400;font-size:clamp(4.4rem,13vw,8rem);line-height:.9;color:var(--rosa);margin:6px 0 8px}
+.portada h1 .resto{display:block;font-size:clamp(1.5rem,3.6vw,2.2rem);font-weight:900;color:var(--ciruela)}
+.portada p{margin:18px 0 0;font-size:1.12rem;color:var(--gris);max-width:44ch}
+.corazon{color:var(--oro)}
+
+/* tarjeta-invitación con el consultador de fechas */
+.invitacion{background:#fff;border:1px solid var(--linea);border-radius:26px;padding:26px;box-shadow:0 18px 40px -24px rgba(70,32,59,.35);position:relative}
+.invitacion::before{content:"";position:absolute;inset:8px;border:1.5px dashed var(--linea);border-radius:20px;pointer-events:none}
+.invitacion h2{font-size:1.5rem}
+.invitacion p.sub{margin:4px 0 18px;color:var(--gris);font-size:.95rem}
+form{display:grid;gap:14px;position:relative}
+label{display:grid;gap:6px;font-weight:800;font-size:.9rem}
+input,select{min-height:50px;padding:0 14px;border:2px solid var(--linea);border-radius:14px;background:#fff;color:var(--ciruela)}
+input:focus,select:focus{outline:none;border-color:var(--rosa)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sedes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sedes label{display:block}
+.sedes input{position:absolute;opacity:0;pointer-events:none}
+.sedes span{display:block;padding:12px;border:2px solid var(--linea);border-radius:14px;text-align:center;font-weight:800;cursor:pointer}
+.sedes span small{display:block;font-weight:600;color:var(--gris);font-size:.8rem}
+.sedes input:checked+span{border-color:var(--rosa);background:var(--rosa-claro)}
+.sedes input:focus-visible+span{outline:3px solid var(--oro);outline-offset:2px}
+
+/* fotos */
+.fotos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 10px}
+@media(max-width:760px){.fotos{grid-template-columns:1fr 1fr}}
+.fotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;background:var(--rosa-claro)}
+
+/* dos quinchos */
+.quinchos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.quinchos{grid-template-columns:1fr}}
+.quincho{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:28px}
+.quincho h3{font-family:var(--script);font-weight:400;font-size:2.6rem;color:var(--rosa)}
+.quincho .dir{margin:2px 0 16px;color:var(--gris);font-weight:600}
+.quincho ul{margin:0;padding:0;list-style:none}
+.quincho li{padding:9px 0 9px 28px;border-bottom:1px solid var(--linea);position:relative}
+.quincho li::before{content:"♥";position:absolute;left:4px;color:var(--oro)}
+.quincho a{display:inline-block;margin-top:16px;font-weight:800;color:var(--rosa-osc)}
+
+/* eventos */
+.eventos{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.eventos li{padding:12px 20px;border-radius:999px;background:var(--rosa-claro);font-weight:800}
+
+/* adicionales */
+.adic{background:var(--ciruela);color:#fff}
+.adic h2{color:#fff}
+.adic .intro{color:#E5C9D8}
+.lista-adic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media(max-width:760px){.lista-adic{grid-template-columns:1fr}}
+.lista-adic article{padding:24px;border:1px solid rgba(255,255,255,.18);border-radius:20px}
+.lista-adic h3{font-size:1.25rem;font-weight:900}
+.lista-adic p{margin:8px 0 0;color:#E5C9D8}
+.lista-adic .menu{margin:10px 0 0;padding:0;list-style:none;columns:2;column-gap:16px;color:#F3DDE7;font-size:.95rem}
+.lista-adic .menu li{break-inside:avoid;padding:3px 0}
+
+/* final */
+.final{text-align:center}
+.final .amor{font-size:clamp(3rem,9vw,5rem)}
+footer{padding:26px 0 34px;border-top:1px solid var(--linea);color:var(--gris);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <div class="wrap">
+    <div class="top"><span>Piñeyro · Dominico</span><a href="https://wa.me/5491139341408">11 3934-1408</a></div>
+    <div class="grid">
+      <div>
+        <span class="nombre">El Quincho de</span>
+        <h1><span class="amor">Amor Amor</span><span class="resto">Tu evento, nuestro quincho.</span></h1>
+        <p>Dos quinchos con pileta climatizada, en Piñeyro y en Dominico. Llegás y está todo armado: vos solo venís a festejar.</p>
+      </div>
+      <div class="invitacion" id="consultar">
+        <h2>Consultá tu fecha</h2>
+        <p class="sub">Completá y te llega el mensaje armado por WhatsApp.</p>
+        <form id="form-fecha">
+          <div class="sedes" role="radiogroup" aria-label="Quincho">
+            <label><input type="radio" name="sede" value="Piñeyro" checked><span>Piñeyro<small>Humberto Primo 1828</small></span></label>
+            <label><input type="radio" name="sede" value="Dominico"><span>Dominico<small>Blvd. de los Italianos 1121</small></span></label>
+          </div>
+          <label>¿Qué festejás?
+            <select id="evento">
+              <option>un cumpleaños</option>
+              <option>un cumple de 15</option>
+              <option>un cumple de 18</option>
+              <option>un bautismo</option>
+              <option>una comunión</option>
+              <option>una reunión</option>
+              <option>otro evento</option>
+            </select>
+          </label>
+          <div class="dos">
+            <label>Fecha<input type="date" id="fecha"></label>
+            <label>Invitados<input type="number" id="invitados" min="1" inputmode="numeric" placeholder="Ej.: 40"></label>
+          </div>
+          <button class="btn" type="submit"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.73 6.45L3 29l6.83-1.79a12.9 12.9 0 0 0 6.2 1.58h.01c7.13 0 12.93-5.79 12.93-12.9S23.17 3 16.04 3Zm0 23.6h-.01a10.7 10.7 0 0 1-5.46-1.5l-.39-.23-4.05 1.06 1.08-3.95-.26-.4a10.66 10.66 0 0 1-1.64-5.68c0-5.9 4.82-10.71 10.74-10.71 5.92 0 10.73 4.8 10.73 10.71 0 5.9-4.82 10.7-10.74 10.7Zm5.89-8.02c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.44 5.47 4.83.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>Consultar por WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="fotos">
+  <img src="https://instagram.feze7-1.fna.fbcdn.net/v/t51.82787-15/878191591_17953971954340057_8668066043308558673_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ig_cache_key=NDAyMDg3MDM3NjIwODA4NjM3MDE3OTUzOTcxOTUxMzQwMDU3.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEyMDYuc2RyLnZpZGVvX3VzZXJfc2VsZWN0ZWRfdGh1bWJuYWlsLkMzIn0%3D&amp;_nc_ohc=2XhgZUavCUsQ7kNvwHJf7QZ&amp;_nc_oc=AdqxsgIXWidjV-R2Pvb616BjrPeNP5JqWeZ7TS5SbHZcGBcS9SGgfyTeH6v4nAy0L2Jaf4OBruomwIO2Fl-Szgjm&amp;_nc_zt=23&amp;_nc_ht=instagram.feze7-1.fna&amp;_nc_gid=x6DWo8YLdmmzym_amtuj7w&amp;_nc_ss=7b6a8&amp;_nc_ct=RQosPBUIFQ4lBAAAAA&amp;oh=00_AQSbAY9PUOiFqsTvkbrAwh9ABQ9TV_SMAMc5_CdgC1Rb2w&amp;oe=6B066C42" alt="Mesa decorada con globos dorados y plateados en el quincho de Piñeyro" referrerpolicy="no-referrer">
+  <img src="https://instagram.feze14-1.fna.fbcdn.net/v/t51.82787-15/881796335_17953762266340057_3810045589654067_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=105&amp;_nc_map=urlgen_bucketless&amp;cb=30a688f7-99daaf84&amp;ig_cache_key=NDAyMDIyMzcxNjQ0NDM4OTE2OTE3OTUzNzYyMjYzMzQwMDU3.3-ccb7-5-cb30a688f7-99daaf84&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEyMDYuc2RyLnZpZGVvX3VzZXJfc2VsZWN0ZWRfdGh1bWJuYWlsLkMzIn0%3D&amp;_nc_ohc=jshWjSg9UBIQ7kNvwEGrpVH&amp;_nc_oc=AdpTI06UNzd6JJxzEvMzvE1X9L0ErIeS-bs7FG48wGDQ9BS0i3rIivVKeyXe33ijCCdutSKt42zRSZL1QYrzKyuj&amp;_nc_zt=23&amp;_nc_ht=instagram.feze14-1.fna&amp;_nc_gid=x6DWo8YLdmmzym_amtuj7w&amp;_nc_ss=7b6a8&amp;_nc_ct=RQosPBUIFQ4lBAAAAA&amp;oh=00_AQQiXDhkpweZLjvcNZupOufczhLEUfaCKfBFH-lYgHREjg&amp;oe=6B066B4B" alt="Salón decorado con globos azules y la pileta" referrerpolicy="no-referrer" loading="lazy">
+  <img src="https://instagram.feze14-1.fna.fbcdn.net/v/t51.71878-15/849058140_2127877091154101_9052235651178467721_n.jpg?stp=dst-jpegr_e15_tt6&amp;_nc_cat=108&amp;_nc_map=urlgen_bucketless&amp;ig_cache_key=NDAwNzI3NzI4MDE0ODI5MzkyMjE4MTEzNDcyMDY2NzU3MTI%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5oZHIudmlkZW9fdXNlcl9zZWxlY3RlZF90aHVtYm5haWwuQzMifQ%3D%3D&amp;_nc_ohc=AxSVzvUCb6MQ7kNvwEFTnni&amp;_nc_oc=AdrBus74hICemRb5eRP2J6nfaaBpvuV25Z77MbjcGhwldMvYeOgo-tqY_yjqslz-6RU6hbjHfKHRwOuSYgvTfSWD&amp;_nc_zt=23&amp;se=-1&amp;_nc_ht=instagram.feze14-1.fna&amp;_nc_gid=x6DWo8YLdmmzym_amtuj7w&amp;_nc_ss=7b6a8&amp;_nc_ct=RQosPBUIFQ4lAgAAAA&amp;oh=00_AQTR2RGtQDXXJOoig7gnZ9HNmRXrrgBRG-Wlsm43ReylSA&amp;oe=6B0641EA" alt="Tabla de fiambres del servicio gastronómico" referrerpolicy="no-referrer" loading="lazy">
+  <img src="https://instagram.feze14-2.fna.fbcdn.net/v/t51.82787-15/865904113_17952489519340057_1748274417348709948_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=108&amp;_nc_map=urlgen_bucketless&amp;ig_cache_key=NDAxNTgwMTkzNTMzOTM2NDI0MzE3OTUyNDg5NTEzMzQwMDU3.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEyMDYuc2RyLnZpZGVvX3VzZXJfc2VsZWN0ZWRfdGh1bWJuYWlsLkMzIn0%3D&amp;_nc_ohc=29VrEwaOu2QQ7kNvwGznZRv&amp;_nc_oc=AdqUJo4jekufcCGMiGxiAxT5JtQBrL-uNLQpMwbxQoTpJ_EclQ1swNVuxjKdLC0WXAMCZHIkC_il8VnkQkA5neAI&amp;_nc_zt=23&amp;_nc_ht=instagram.feze14-2.fna&amp;_nc_gid=x6DWo8YLdmmzym_amtuj7w&amp;_nc_ss=7b6a8&amp;_nc_ct=RQosPBUIFQ4lBAAAAA&amp;oh=00_AQR6YPk1xGnLybDVZU6GYQbBO3DLYh_b1NFQuieiLLqPZA&amp;oe=6B065376" alt="Invitadas sacándose fotos con el iPhone mágico" referrerpolicy="no-referrer" loading="lazy">
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Elegí tu quincho</h2>
+    <p class="intro">Los dos están equipados y con pileta climatizada. Elegí el que te quede más cerca.</p>
+    <div class="quinchos">
+      <article class="quincho">
+        <h3>Piñeyro</h3>
+        <p class="dir">Humberto Primo 1828, Piñeyro</p>
+        <ul>
+          <li>Pileta climatizada, cerrada y techada</li>
+          <li>Salón totalmente equipado</li>
+          <li>Te lo entregamos armado y decorado</li>
+        </ul>
+        <a href="#consultar" data-sede="Piñeyro">Consultar fecha en Piñeyro</a>
+      </article>
+      <article class="quincho">
+        <h3>Dominico</h3>
+        <p class="dir">Blvd. de los Italianos 1121, Dominico</p>
+        <ul>
+          <li>Pileta climatizada</li>
+          <li>Juegos para los chicos</li>
+          <li>Parrilla y salón listo para usar</li>
+        </ul>
+        <a href="#consultar" data-sede="Dominico">Consultar fecha en Dominico</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Para qué festejo</h2>
+    <p class="intro">Del primer añito a los 18, y todo lo del medio.</p>
+    <ul class="eventos">
+      <li>Cumpleaños</li><li>Cumples de 15</li><li>Cumples de 18</li><li>Bautismos</li><li>Comuniones</li><li>Reuniones familiares</li>
+    </ul>
+  </div>
+</section>
+
+<section class="adic">
+  <div class="wrap">
+    <h2>Sumale lo que quieras</h2>
+    <p class="intro">Armá el evento a tu medida con nuestros adicionales. Se contratan en cualquiera de los dos quinchos.</p>
+    <div class="lista-adic">
+      <article>
+        <h3>Servicio gastronómico</h3>
+        <p>Comida para compartir, lista cuando llegan los invitados:</p>
+        <ul class="menu">
+          <li>Tabla de fiambres</li><li>Pizzetas</li><li>Medialunas de jamón y queso</li><li>Sándwiches de pollo a la crema</li><li>Empanadas de carne</li><li>Chips de salame y queso</li>
+        </ul>
+      </article>
+      <article>
+        <h3>iPhone mágico</h3>
+        <p>Una cabina de fotos para que los invitados se saquen fotos y se lleven el recuerdo de tu fiesta.</p>
+      </article>
+      <article>
+        <h3>Decoración</h3>
+        <p>Ambientación temática, globos y mesa principal armada según tu idea.</p>
+      </article>
+      <article>
+        <h3>Mesa dulce y mozas</h3>
+        <p>Mesa dulce para el postre y servicio de mozas para que vos disfrutes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="amor">¿Festejamos?</span>
+    <p class="intro" style="margin-inline:auto">Escribinos con la fecha que tenés en mente y te contamos si está libre.</p>
+    <a class="btn" href="#consultar"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.73 6.45L3 29l6.83-1.79a12.9 12.9 0 0 0 6.2 1.58h.01c7.13 0 12.93-5.79 12.93-12.9S23.17 3 16.04 3Zm0 23.6h-.01a10.7 10.7 0 0 1-5.46-1.5l-.39-.23-4.05 1.06 1.08-3.95-.26-.4a10.66 10.66 0 0 1-1.64-5.68c0-5.9 4.82-10.71 10.74-10.71 5.92 0 10.73 4.8 10.73 10.71 0 5.9-4.82 10.7-10.74 10.7Zm5.89-8.02c-.32-.16-1.91-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.68 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.44 5.47 4.83.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>Consultar fecha</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>El Quincho de Amor Amor <span class="corazon">♥</span> Piñeyro y Dominico · <a href="https://www.instagram.com/elquinchodeamoramor/">Instagram</a></span>
+    <span>Muestra hecha por <a href="https://pazstudio.com.ar">Paz Studio</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var f=document.getElementById('fecha');
+  var d=new Date();d.setDate(d.getDate()+1);f.min=d.toISOString().slice(0,10);
+  document.querySelectorAll('[data-sede]').forEach(function(a){a.addEventListener('click',function(){
+    var r=document.querySelector('input[name=sede][value="'+a.dataset.sede+'"]');if(r)r.checked=true;
+  })});
+  document.getElementById('form-fecha').addEventListener('submit',function(e){
+    e.preventDefault();
+    var sede=document.querySelector('input[name=sede]:checked').value,ev=document.getElementById('evento').value,inv=document.getElementById('invitados').value,fe=f.value;
+    var txt='Hola! Quiero consultar si tienen libre el quincho de '+sede+' para '+ev;
+    if(fe){var p=fe.split('-');txt+=' el '+p[2]+'/'+p[1]}
+    if(inv)txt+=', para unas '+inv+' personas';
+    txt+='. ¡Gracias!';
+    window.open('https://wa.me/5491139341408?text='+encodeURIComponent(txt),'_blank');
+  });
+})();
+</script>
+</body>
+</html>
