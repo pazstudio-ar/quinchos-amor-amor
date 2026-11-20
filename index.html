@@ -63,9 +63,9 @@ input,select{min-height:50px;padding:0 14px;border:2px solid var(--linea);border
 input:focus,select:focus{outline:none;border-color:var(--rosa)}
 .dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .sedes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.sedes label{display:block}
+.sedes label{display:flex}
 .sedes input{position:absolute;opacity:0;pointer-events:none}
-.sedes span{display:block;padding:12px;border:2px solid var(--linea);border-radius:14px;text-align:center;font-weight:800;cursor:pointer}
+.sedes span{display:flex;flex-direction:column;justify-content:center;width:100%;min-height:68px;padding:10px 8px;border:2px solid var(--linea);border-radius:14px;text-align:center;font-weight:800;cursor:pointer}
 .sedes span small{display:block;font-weight:600;color:var(--gris);font-size:.8rem}
 .sedes input:checked+span{border-color:var(--rosa);background:var(--rosa-claro)}
 .sedes input:focus-visible+span{outline:3px solid var(--oro);outline-offset:2px}
@@ -125,8 +125,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
         <p class="sub">Completá y te llega el mensaje armado por WhatsApp.</p>
         <form id="form-fecha">
           <div class="sedes" role="radiogroup" aria-label="Quincho">
-            <label><input type="radio" name="sede" value="Piñeyro" checked><span>Piñeyro<small>Humberto Primo 1828</small></span></label>
-            <label><input type="radio" name="sede" value="Dominico"><span>Dominico<small>Blvd. de los Italianos 1121</small></span></label>
+            <label><input type="radio" name="sede" value="Piñeyro" checked><span>Piñeyro<small>H. Primo 1828</small></span></label>
+            <label><input type="radio" name="sede" value="Dominico"><span>Dominico<small>Blvd. Italianos 1121</small></span></label>
           </div>
           <label>¿Qué festejás?
             <select id="evento">
