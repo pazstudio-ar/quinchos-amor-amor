@@ -64,8 +64,8 @@ input,select{width:100%;min-width:0;min-height:50px;padding:0 14px;border:2px so
 input:focus,select:focus{outline:none;border-color:var(--rosa)}
 .dos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
 .sedes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
-.sedes label{display:flex}
-.sedes input{position:absolute;opacity:0;pointer-events:none}
+.sedes label{display:flex;position:relative}
+.sedes input{position:absolute;width:1px;height:1px;min-height:0;padding:0;opacity:0;pointer-events:none}
 .sedes span{display:flex;flex-direction:column;justify-content:center;width:100%;min-height:68px;padding:10px 8px;border:2px solid var(--linea);border-radius:14px;text-align:center;font-weight:800;cursor:pointer}
 .sedes span small{display:block;font-weight:600;color:var(--gris);font-size:.8rem}
 .sedes input:checked+span{border-color:var(--rosa);background:var(--rosa-claro)}
